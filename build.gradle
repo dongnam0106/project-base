@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.8'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.mon'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.31'
+
+    //jhipster
+    implementation group: 'io.github.jhipster', name: 'jhipster-framework', version: '3.9.0'
+    //swagger
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    //mapper
+    implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
