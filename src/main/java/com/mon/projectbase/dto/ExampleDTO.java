@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ExampleDTO extends BaseDTO{
     private Long id;
-    private Long name;
+
+    private String name;
 }
