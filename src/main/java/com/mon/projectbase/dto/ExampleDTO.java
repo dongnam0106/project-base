@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ExampleDTO extends BaseDTO{
+public class ExampleDTO extends BaseDTO {
     private Long id;
 
     private String name;
