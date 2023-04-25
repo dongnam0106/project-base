@@ -19,17 +19,17 @@ public abstract class BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @CreatedDate
-    @Column(name = "created_at", nullable = false, columnDefinition = "DATE DEFAULT CURRENT_DATE")
+    @Column(name = "created_at")
     private Date createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at", nullable = false, columnDefinition = "DATE DEFAULT CURRENT_DATE")
+    @Column(name = "updated_at")
     private Date updatedAt;
 
     @Column(name = "deleted_at")
     private Date deletedAt;
 
-    @Column(name = "is_active", nullable = false, columnDefinition = "TINYINT(1) DEFAULT 1")
+    @Column(name = "is_active")
     private int isActive = 1;
 
 }
