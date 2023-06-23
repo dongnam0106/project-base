@@ -5,19 +5,23 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - //var/run/docker.sock:/var/run/docker.sock
     build: ../
     depends_on:
       - db
     ports:
       - "8080:8080"
-#    network_mode: "host"
+  #    network_mode: "host"
   db:
     image: mysql:latest
     environment:
       MYSQL_DATABASE: base-db
-#      MYSQL_USER: root
-#      MYSQL_PASSWORD: 12345678
-#      MYSQL_ROOT_PASSWORD: 12345678
+      #      MYSQL_USER: root
+      #      MYSQL_PASSWORD: 12345678
+      #      MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
     volumes:
       - ./mysql-data:/var/lib/mysql
