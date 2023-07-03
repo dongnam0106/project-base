@@ -1,4 +1,4 @@
-package com.mon.projectbase.security;
+package com.mon.projectbase.security.jwt;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

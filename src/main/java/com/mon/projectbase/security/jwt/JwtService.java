@@ -1,5 +1,6 @@
-package com.mon.projectbase.security;
+package com.mon.projectbase.security.jwt;
 
+import com.mon.projectbase.security.UserPrinciple;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.slf4j.Logger;

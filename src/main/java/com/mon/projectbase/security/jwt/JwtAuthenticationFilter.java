@@ -1,4 +1,4 @@
-package com.mon.projectbase.security;
+package com.mon.projectbase.security.jwt;
 
 import com.mon.projectbase.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

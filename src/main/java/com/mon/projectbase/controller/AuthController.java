@@ -1,9 +1,8 @@
 package com.mon.projectbase.controller;
 
 import com.mon.projectbase.dto.UserDTO;
-import com.mon.projectbase.model.User;
-import com.mon.projectbase.security.JwtResponse;
-import com.mon.projectbase.security.JwtService;
+import com.mon.projectbase.security.jwt.JwtResponse;
+import com.mon.projectbase.security.jwt.JwtService;
 import com.mon.projectbase.service.UserService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

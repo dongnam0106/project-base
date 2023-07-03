@@ -1,7 +1,7 @@
 package com.mon.projectbase.config;
 
 import com.mon.projectbase.security.CustomAccessDeniedHandler;
-import com.mon.projectbase.security.JwtAuthenticationFilter;
+import com.mon.projectbase.security.jwt.JwtAuthenticationFilter;
 import com.mon.projectbase.security.RestAuthenticationEntryPoint;
 import com.mon.projectbase.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
