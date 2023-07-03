@@ -1,13 +1,13 @@
-FROM gradle:jdk11 as builder
-COPY --chown=gradle:gradle . /app
-WORKDIR /app
-RUN gradle clean bootjar
+#FROM gradle:jdk11 as builder
+#COPY --chown=gradle:gradle . /app
+#WORKDIR /app
+#RUN gradle clean bootjar
 
-FROM openjdk:11-jdk
+FROM adoptopenjdk:11-jdk-hotspot
 VOLUME /tmp
-ARG JAR_FILE=build/libs/project-base-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/*.jar
 COPY ${JAR_FILE} app.jar
-#RUN #apt-get update && \
+#RUN apt-get update && \
 #    apt-get install -y mysql-client && \
 #    rm -rf /var/lib/apt/lists/*
-ENTRYPOINT ["java", "-jar", "/*.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
